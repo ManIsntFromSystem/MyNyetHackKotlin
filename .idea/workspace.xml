@@ -22,14 +22,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\AndroidStudioProjects\NyetHack\src\com\bignerdranch\nyethack" />
       <recent name="E:\AndroidStudioProjects\NyetHack\src\Main" />
     </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.bignerdranch.nyethack" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\AndroidStudioProjects\NyetHack\data" />
+    </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Main.TavernKt">
+  <component name="RunManager" selected="Kotlin.com.bignerdranch.nyethack.GameKt">
     <configuration name="Challenges.NyetHack_ConditionalIsChallengesKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="NyetHack" />
       <option name="VM_PARAMETERS" />
@@ -56,40 +64,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main.GameKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="com.bignerdranch.nyethack.GameKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="NyetHack" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Main.GameKt" />
+      <option name="MAIN_CLASS_NAME" value="com.bignerdranch.nyethack.GameKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main.SwordJugglerKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="com.bignerdranch.nyethack.SwordJugglerKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="NyetHack" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Main.SwordJugglerKt" />
+      <option name="MAIN_CLASS_NAME" value="com.bignerdranch.nyethack.SwordJugglerKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main.TavernKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="com.bignerdranch.nyethack.TavernKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="NyetHack" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Main.TavernKt" />
+      <option name="MAIN_CLASS_NAME" value="com.bignerdranch.nyethack.TavernKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -97,10 +105,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.Main.TavernKt" />
+        <item itemvalue="Kotlin.com.bignerdranch.nyethack.GameKt" />
+        <item itemvalue="Kotlin.com.bignerdranch.nyethack.TavernKt" />
         <item itemvalue="Kotlin.Challenges.SymKt" />
-        <item itemvalue="Kotlin.Main.SwordJugglerKt" />
-        <item itemvalue="Kotlin.Main.GameKt" />
+        <item itemvalue="Kotlin.com.bignerdranch.nyethack.SwordJugglerKt" />
         <item itemvalue="Kotlin.Challenges.NyetHack_ConditionalIsChallengesKt" />
       </list>
     </recent_temporary>
@@ -118,45 +126,57 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="188" key="GridCell.Tab.0.bottom" timestamp="1582278331978">
+    <state x="739" y="51" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1583492128162">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="188" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1582278331978" />
-    <state width="1877" height="188" key="GridCell.Tab.0.center" timestamp="1582278331978">
+    <state x="739" y="51" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583492128162" />
+    <state width="1877" height="171" key="GridCell.Tab.0.bottom" timestamp="1584344096435">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="188" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1582278331978" />
-    <state width="1877" height="188" key="GridCell.Tab.0.left" timestamp="1582278331978">
+    <state width="1877" height="171" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584344096435" />
+    <state width="1877" height="171" key="GridCell.Tab.0.center" timestamp="1584344096435">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="188" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1582278331978" />
-    <state width="1877" height="188" key="GridCell.Tab.0.right" timestamp="1582278331978">
+    <state width="1877" height="171" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584344096435" />
+    <state width="1877" height="171" key="GridCell.Tab.0.left" timestamp="1584344096435">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="188" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1582278331978" />
-    <state width="1877" height="341" key="GridCell.Tab.1.bottom" timestamp="1582269620076">
+    <state width="1877" height="171" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584344096435" />
+    <state width="1877" height="171" key="GridCell.Tab.0.right" timestamp="1584344096435">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1582269620076" />
-    <state width="1877" height="341" key="GridCell.Tab.1.center" timestamp="1582269620075">
+    <state width="1877" height="171" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584344096435" />
+    <state width="1877" height="341" key="GridCell.Tab.1.bottom" timestamp="1584338555154">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1582269620075" />
-    <state width="1877" height="341" key="GridCell.Tab.1.left" timestamp="1582269620075">
+    <state width="1877" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584338555154" />
+    <state width="1877" height="341" key="GridCell.Tab.1.center" timestamp="1584338555154">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1582269620075" />
-    <state width="1877" height="341" key="GridCell.Tab.1.right" timestamp="1582269620075">
+    <state width="1877" height="341" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584338555154" />
+    <state width="1877" height="341" key="GridCell.Tab.1.left" timestamp="1584338555154">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1582269620075" />
-    <state x="461" y="183" key="SettingsEditor" timestamp="1582264520489">
+    <state width="1877" height="341" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584338555154" />
+    <state width="1877" height="341" key="GridCell.Tab.1.right" timestamp="1584338555154">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="183" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1582264520489" />
-    <state x="641" y="365" key="com.intellij.ide.util.TipDialog" timestamp="1582263824334">
+    <state width="1877" height="341" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584338555154" />
+    <state x="461" y="183" key="SettingsEditor" timestamp="1584970768241">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="641" y="365" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582263824334" />
+    <state x="461" y="183" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584970768241" />
+    <state x="641" y="365" key="com.intellij.ide.util.TipDialog" timestamp="1584970756530">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="641" y="365" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584970756530" />
+    <state x="627" y="220" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583404664473">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="627" y="220" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1583404664473" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1582621597502">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1582621597502" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package Main
+package com.bignerdranch.nyethack
 
 import java.lang.IllegalStateException
 

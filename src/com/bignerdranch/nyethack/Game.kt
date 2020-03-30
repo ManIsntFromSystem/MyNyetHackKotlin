@@ -1,7 +1,6 @@
 package com.bignerdranch.nyethack
 
-import java.lang.Exception
-import java.lang.IllegalStateException
+import kotlin.system.exitProcess
 
 fun main() {
     Game.play()
@@ -44,6 +43,29 @@ object Game {
         println("${player.name}  ${player.formatHealthStatus()}")
     }
 
+    private fun fight() = currentRoom.monster?.let {
+        while (player.healthPoints > 0 && it.healthPoints > 0){
+            slay(it)
+            Thread.sleep(1000)
+        }
+
+        "Combat complete."
+    } ?: "There is nothing here to fight."
+
+    private fun slay(monster: Monster) {
+        println("${monster.name} did ${monster.attack(player)} damage!")
+        println("${player.name} did ${player.attack(monster)} damage!")
+
+        if (player.healthPoints <= 0) {
+            println(">>>>> You have been defeated! Thanks for playing. <<<<<")
+            exitProcess(0)
+        }
+
+        if (monster.healthPoints <= 0) {
+            println(">>>>> ${monster.name} has been defeated! <<<<<")
+            currentRoom.monster = null
+        }
+    }
     private class GameInput(arg: String?) {
         private val input = arg ?: ""
         val command = input.split(" ")[0]
@@ -51,8 +73,10 @@ object Game {
 
         fun processCommand() = when (command.toLowerCase()) {
             "move" -> move(argument)
+            "map" -> map2()
+            "ring" -> ringBell(argument)
+            "fight" -> fight()
             "quit" -> quit()
-            "map" -> map()
             else -> commandNotFound()
         }
     }
@@ -62,24 +86,36 @@ object Game {
         isGameStatus = true
     }
 
-//    private fun map() {
-//        for (maps in worldMap){
-//            for (map in maps){
-//                var statusRoom = "0"
-//                if (map == currentRoom) statusRoom = "X"
-//                print("$statusRoom ")
-//            }
-//        }
-//    }
+    public fun ringBell(numbersRing: String) =
+        try {
+            if (numbersRing != null && numbersRing.toInt() > 0) {
+                var count = 0
+                while (count < numbersRing.toInt()) {
+                    println("Ring! Ring! Ring!")
+                    count++
+                }
+            } else {
+                println("Input valid value!")
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
 
-    private fun map() {
+    private fun map2() {
         var mapStr = ""
         for (maps in worldMap) {
-            maps.forEachIndexed { index, any ->
-                if (index == 0) mapStr.plus("\n")
-                print("mapStr")
+            when {
+                maps.size > 1 -> {
+                    mapStr += "\n"
+                    for (map in maps) {
+                        mapStr += if (map == currentRoom) "X" else "O"
+                    }
+                }
+                maps == currentRoom -> mapStr += "X"
+                else -> mapStr += "O"
             }
         }
+        println(mapStr)
     }
 
     private fun commandNotFound() = "I'm not quit sure what you're trying to do!"

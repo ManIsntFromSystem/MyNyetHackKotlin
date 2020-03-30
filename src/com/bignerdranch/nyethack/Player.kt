@@ -2,10 +2,25 @@ package com.bignerdranch.nyethack
 
 import java.io.File
 
-class Player(_name: String,
-             var healthPoints: Int = 100,
-             val isBlessed:Boolean,
-             private val isImmortal:Boolean) {
+class Player(
+    _name: String,
+    override var healthPoints: Int = 100,
+    val isBlessed: Boolean,
+    private val isImmortal: Boolean
+) : Fightable {
+
+    override var diceCount: Int = 3
+    override var diceSides: Int = 6
+    override fun attack(opponent: Fightable): Int {
+        val damageDealt = if (isBlessed) {
+            damageRoll * 2
+        } else{
+            damageRoll
+        }
+        opponent.healthPoints -= damageDealt
+        return damageDealt
+    }
+
     var name = _name
         get() = "${field.capitalize()} of $hometown"
         set(value) {
@@ -16,12 +31,15 @@ class Player(_name: String,
     var currentPosition = Coordinate(0, 0)
 
     init {
-        require(healthPoints > 1) {"healthPoints must be greater than zero"}
-        require(name.isNotBlank()) {"Player must have a name"}
+        require(healthPoints > 1) { "healthPoints must be greater than zero" }
+        require(name.isNotBlank()) { "Player must have a name" }
     }
-    constructor(name: String) : this(name,
+
+    constructor(name: String) : this(
+        name,
         isBlessed = true,
-        isImmortal = false) {
+        isImmortal = false
+    ) {
         if (name.toLowerCase() == "kar") healthPoints = 40
     }
 

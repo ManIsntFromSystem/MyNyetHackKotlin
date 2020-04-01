@@ -1,5 +1,7 @@
 package com.bignerdranch.nyethack
 
+import com.bignerdranch.nyethack.extensions.frame
+import com.bignerdranch.nyethack.extensions.random
 import java.io.File
 
 const val TAVERN_NAME = "Taernyl's Folly"
@@ -13,6 +15,18 @@ val menuList = File("data/tavern-menu-items.txt")
     .readText()
     .split("\n")
 val patronGold = mutableMapOf<String, Double>()
+
+private fun String.toDragonSpeak(): String =
+    this.replace(Regex("[aeiouAEIOU]")) {
+        when (it.value) {
+            "a", "A" -> "4"
+            "e", "E" -> "3"
+            "i", "I" -> "1"
+            "o", "O" -> "0"
+            "u", "U" -> "|_|"
+            else -> it.value
+        }
+    }
 
 fun main() {
 
@@ -34,9 +48,16 @@ fun main() {
         "Madrigal",
         menuList[0]
     )
+
+    val uniquePatrons: Set<String> = generateSequence {
+        val first = patronList.random()
+        val last = lastName.random()
+        "$first $last"
+    }.take(10).toSet()
+
     (0..9).forEach {
-        val first = patronList.shuffled().first()
-        val last = lastName.shuffled().first()
+        val first = patronList.random()
+        val last = lastName.random()
         val name = "$first $last"
         uniquePatron += name
     }
@@ -49,18 +70,17 @@ fun main() {
     var orderCount = 0
     while (orderCount <= 9) {
         placeOrder(
-            uniquePatron.shuffled().first(),
-            menuList.shuffled().first()
+            uniquePatron.random(),
+            menuList.random()
         )
         orderCount++
     }
-
     displayPatronBalance()
 }
 
 fun performPurchase(price: Double, patronName: String) {
     val totalPurse = patronGold.getValue(patronName)
-    if (totalPurse >= price){
+    if (totalPurse >= price) {
         patronGold[patronName] = totalPurse - price
     } else {
         println("Bouncer throws the $patronName out")
@@ -69,7 +89,7 @@ fun performPurchase(price: Double, patronName: String) {
 
 fun displayPatronBalance() {
     patronGold.forEach { (patron, balance) ->
-        if (balance < 0){
+        if (balance < 0) {
             patronGold.remove(patron)
             uniquePatron.remove(patron)
             println("Bouncer throws the $patron out")
@@ -82,6 +102,7 @@ fun displayPatronBalance() {
 fun placeOrder(namePatron: String, menuData: String) {
     val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
     val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
+    println(namePatron.frame(5))
     println("$namePatron speaks with $tavernMaster about their order.")
 
     val (type, name, price) = menuData.split(',')
@@ -95,10 +116,10 @@ fun placeOrder(namePatron: String, menuData: String) {
 //    performPurchase(price.toDouble())
 
     val phrase = if (name == "Dragon's Breath" && namePatron == "Madrigal") {
-        "$namePatron exclaims ${toDragonSpeak("Ah, delicious $name")}"
-        "$namePatron exclaims ${toDragonSpeak("DRAGON'S BREATH: IT'S GOT WHAT ADVENTURERS CRAVE!")}"
+        "$namePatron exclaims ${"Ah, delicious $name".toDragonSpeak()}"
+        "$namePatron exclaims ${"DRAGON'S BREATH: IT'S GOT WHAT ADVENTURERS CRAVE!".toDragonSpeak()}"
     } else if (name == "Dragon's Breath") {
-        "$namePatron exclaims ${toDragonSpeak("Ah, delicious $name")}"
+        "$namePatron exclaims ${"Ah, delicious $name".toDragonSpeak()}"
     } else {
         "$namePatron says: 'Thanks for the $name'"
     }
@@ -106,23 +127,12 @@ fun placeOrder(namePatron: String, menuData: String) {
     println(phrase)
 }
 
-private fun toDragonSpeak(phrase: String) =
-    phrase.replace(Regex("[aeiouAEIOU]")) {
-        when (it.value) {
-            "a", "A" -> "4"
-            "e", "E" -> "3"
-            "i", "I" -> "1"
-            "o", "O" -> "0"
-            "u", "U" -> "|_|"
-            else -> it.value
-        }
-    }
 private fun displayMenuList() {
     greetingParent = "*** Welcome to $TAVERN_NAME ***\n"
     println(greetingParent)
 
     var itemsCount = 0
-    while ( itemsCount < menuList.size) {
+    while (itemsCount < menuList.size) {
         val (type, _, _) = menuList[itemsCount].split(',')
         typeMenuItems.add(type)
         itemsCount++
@@ -140,6 +150,17 @@ private fun displayMenuList() {
     println()
 }
 
+//private fun toDragonSpeak(phrase: String) =
+//    phrase.replace(Regex("[aeiouAEIOU]")) {
+//        when (it.value) {
+//            "a", "A" -> "4"
+//            "e", "E" -> "3"
+//            "i", "I" -> "1"
+//            "o", "O" -> "0"
+//            "u", "U" -> "|_|"
+//            else -> it.value
+//        }
+//    }
 
 
 

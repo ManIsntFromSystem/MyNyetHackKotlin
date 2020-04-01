@@ -6,6 +6,7 @@ fun main() {
     Game.play()
 }
 
+
 object Game {
     private val player = Player("madrigal")
     private var currentRoom: Room = TownSquare()
@@ -66,6 +67,13 @@ object Game {
             currentRoom.monster = null
         }
     }
+
+//    fun Room.configurePitGoblin(block: Room(Goblin) -> Goblin): Room {
+//        val goblin = block(Goblin("Pit Goblin", description() = "An Evil Pit Goblin"))
+//        monster = goblin
+//        return this
+//    }
+
     private class GameInput(arg: String?) {
         private val input = arg ?: ""
         val command = input.split(" ")[0]
@@ -86,7 +94,7 @@ object Game {
         isGameStatus = true
     }
 
-    public fun ringBell(numbersRing: String) =
+    fun ringBell(numbersRing: String) =
         try {
             if (numbersRing != null && numbersRing.toInt() > 0) {
                 var count = 0

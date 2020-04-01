@@ -6,11 +6,18 @@ open class Room(val name: String) {
     var monster: Monster? = Goblin()
 
     fun description() = "Room: $name\n" +
-            "Danger level: $dangerLevel" +
+            "Danger level: $dangerLevel " +
             "Creature: ${monster?.description ?: "none."}"
 
     open fun load() = "Nothing much to see here..."
+
+//    fun Room.configurePitGoblin(block: Room(Goblin) -> Goblin): Room {
+//        val goblin = block(Goblin("Pit Goblin", description() = "An Evil Pit Goblin"))
+//        monster = goblin
+//        return this
+//    }
 }
+
 
 class TownSquare : Room("Town Square") {
 
